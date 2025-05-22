@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 const schoolRoutes = require('./routes/schoolRoutes');
 
@@ -10,6 +11,8 @@ const app = express();
 
 // Middleware to parse JSON
 app.use(express.json());
+
+app.use(cors());
 
 // Routes
 app.use('/api', schoolRoutes);
