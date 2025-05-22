@@ -1,4 +1,4 @@
-const db = require('../config/db');
+const db = require('../config/db.js');
 
 // POST /api/addSchool
 exports.addSchool = async (req, res) => {
